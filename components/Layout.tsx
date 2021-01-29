@@ -2,8 +2,8 @@ import { ReactNode } from 'react'
 import Head from 'next/head'
 
 type LayoutProps = {
-  children?: ReactNode
-  title?: string
+  children: ReactNode
+  title: string
 }
 
 const Layout = ({ children, title }: LayoutProps) => {

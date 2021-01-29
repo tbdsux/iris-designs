@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const NavMenu = () => {
   return (
@@ -8,24 +9,24 @@ const NavMenu = () => {
       </div>
       <ul className="flex items-center text-xl text-gray-800">
         <li className="px-6">
-          <a href="#" className="tracking-wide hover:text-main">
-            Home
-          </a>
+          <Link href="/">
+            <a className="tracking-wide hover:text-main">Home</a>
+          </Link>
         </li>
         <li className="px-6">
-          <a href="#" className="tracking-wide hover:text-main">
-            Our Services
-          </a>
+          <Link href="/services">
+            <a className="tracking-wide hover:text-main">Our Services</a>
+          </Link>
         </li>
         <li className="px-6">
-          <a href="#" className="tracking-wide hover:text-main">
-            Portfolio
-          </a>
+          <Link href="/portfolio">
+            <a className="tracking-wide hover:text-main">Portfolio</a>
+          </Link>
         </li>
         <li className="px-6">
-          <a href="#" className="tracking-wide hover:text-main">
-            About Us
-          </a>
+          <Link href="/about-us">
+            <a className="tracking-wide hover:text-main">About Us</a>
+          </Link>
         </li>
         <li className="pl-8">
           <a

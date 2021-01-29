@@ -4,16 +4,16 @@ import Layout from '../components/Layout'
 import NavMenu from '../components/NavMenu'
 import Showcase from '../components/index/Showcase'
 import CTA from '../components/CTA'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <Layout title="Iris Designs | Official Website">
-      <header>
-        {/* main navigation menu */}
-        <NavMenu />
-        {/* showcase */}
-        <Showcase />
-      </header>
+      {/* main navigation menu */}
+      <NavMenu />
+
+      {/* showcase */}
+      <Showcase />
 
       <hr />
 
@@ -66,6 +66,8 @@ const Home = () => {
       </div>
 
       <CTA text="Do you want to have a stylish, modern and minimal design for your business?" />
+
+      <Footer />
     </Layout>
   )
 }
