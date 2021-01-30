@@ -16,6 +16,8 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
+      bland: 'rgba(0, 0, 0, 0.5)',
+
       main: '#A05EB5',
       'grad-1': '#8a557b',
       'grad-2': '#673b67',
@@ -808,7 +810,7 @@ module.exports = {
     clear: ['responsive'],
     container: ['responsive'],
     cursor: ['responsive'],
-    display: ['responsive'],
+    display: ['responsive', 'group-hover'],
     divideColor: ['responsive', 'dark'],
     divideOpacity: ['responsive'],
     divideStyle: ['responsive'],

@@ -1,6 +1,9 @@
 import Layout from '../components/Layout'
 import NavMenu from '../components/NavMenu'
+import Footer from '../components/Footer'
 import SubPage from '../components/SubPage'
+import CTA from '../components/CTA'
+import MainPortfolio from '../components/portfolio/Portfolio'
 
 const Portfolio = () => {
   return (
@@ -22,6 +25,22 @@ const Portfolio = () => {
         page_button_string="What We Made"
         page_image="/portfolio.svg"
       />
+
+      <hr />
+
+      {/* projects made */}
+      <div className="py-12">
+        <div className="text-center">
+          <h3 className="text-3xl font-extrabold text-gray-700">
+            The Projects we have Made...
+          </h3>
+          <MainPortfolio />
+        </div>
+      </div>
+
+      <CTA text="Amazed by our projects and designs? Collaborate With Us!" />
+
+      <Footer />
     </Layout>
   )
 }
