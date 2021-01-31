@@ -5,11 +5,11 @@ interface CTAProps {
 const CTA = ({ text }: CTAProps) => {
   return (
     <div className=" py-8 text-white bg-grad-2">
-      <div className="w-5/6 mx-auto flex items-center justify-between">
-        <p className="text-2xl pr-4">{text}</p>
+      <div className="w-5/6 md:w-11/12 lg:w-5/6 mx-auto flex flex-col md:flex-row items-center justify-between">
+        <p className="text-2xl pr-4 md:w-3/4">{text}</p>
         <a
           href="#"
-          className="bg-main text-white py-2 px-8 hover:bg-grad-1 flex items-center text-xl"
+          className="bg-main text-white py-2 px-8 hover:bg-grad-1 flex items-center text-xl mt-3 md:mt-0"
         >
           <div className="h-6 w-6 mr-2">
             <svg

@@ -5,11 +5,11 @@ import { members } from '../../data/team'
 const Team = () => {
   return (
     <div className="py-10">
-      <div className="w-5/6 mx-auto grid grid-cols-3 gap-8">
+      <div className="w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-8">
         {members.map((member) => (
           <div
             key={member.name}
-            className="text-center p-6 border-opacity-20 rounded-lg bg-white"
+            className="flex flex-col md:flex-row lg:flex-col items-center justify-around text-center p-6 border-opacity-20 rounded-lg bg-white"
           >
             <Image
               src={`/about/${member.image}`}

@@ -13,13 +13,13 @@ const AboutUs = () => {
 
       {/* header */}
       <div className="py-12">
-        <div className="w-5/6 mx-auto flex justify-between">
-          <div className="w-2/3 text-center pr-12">
-            <h2 className="text-3xl font-extrabold mb-8 text-gray-700">
+        <div className="w-5/6 mx-auto flex flex-col lg:flex-row justify-between">
+          <div className="w-full lg:w-2/3 text-center lg:pr-12">
+            <h2 className="text-2xl lg:text-3xl font-extrabold mb-8 text-gray-700">
               About Us
             </h2>
-            <h3 className="text-4xl tracking-wide">
-              <span className="font-extrabold uppercase text-main text-5xl">
+            <h3 className="text-3xl md:text-4xl tracking-wide">
+              <span className="font-extrabold uppercase text-main text-4xl lg:text-5xl">
                 Iris Designs
               </span>{' '}
               <br />

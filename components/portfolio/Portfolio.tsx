@@ -10,7 +10,7 @@ const MainPortfolio = () => {
 
   return (
     <div className="my-10">
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
           <div key={project.name}>
             <div className="group relative">

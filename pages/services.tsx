@@ -49,13 +49,13 @@ const Services = () => {
 
       {/* not sure section */}
       <div className="bg-grad-2 py-12">
-        <div className="w-4/5 mx-auto">
-          <div className="flex justify-between items-center">
-            <div className="w-3/5 mr-8">
-              <h1 className="text-5xl font-extrabold text-gray-100">
+        <div className="w-5/6 lg:w-4/5 mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="w-11/12 xs:w-5/6 mx-auto md:w-3/5 md:mr-8">
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-100">
                 Not sure of what to do?
               </h1>
-              <p className="text-3xl mt-4 text-gray-300">
+              <p className="text-2xl md:text-3xl mt-4 text-gray-300">
                 Send us a message and we will try to help you on your design for
                 your business
               </p>
@@ -64,7 +64,7 @@ const Services = () => {
                   href="#"
                   className="bg-main py-3 px-8 text-xl text-white opacity-90 hover:opacity-100 inline-flex items-center"
                 >
-                  <div className="h6 w-6 mr-2">
+                  <div className="h-6 w-6 mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
