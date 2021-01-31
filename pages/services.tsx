@@ -81,7 +81,12 @@ const Services = () => {
                 </a>
               </div>
             </div>
-            <Image src="/question.svg" height="400" width="400" />
+            <Image
+              src="/question.svg"
+              height="400"
+              width="400"
+              alt="Ask Us a Question"
+            />
           </div>
         </div>
       </div>

@@ -32,7 +32,12 @@ const Home = () => {
             </p>
           </div>
           <div className="mt-4 xs:w-3/4 mx-auto md:w-full md:mt-0">
-            <Image src="/showcase/stylish.svg" height="400" width="400" />
+            <Image
+              alt="Stylish Design"
+              src="/showcase/stylish.svg"
+              height="400"
+              width="400"
+            />
           </div>
         </div>
 
@@ -46,7 +51,12 @@ const Home = () => {
             </p>
           </div>
           <div className="mt-4 xs:w-3/4 mx-auto md:w-full md:mt-0">
-            <Image src="/showcase/modern.svg" height="400" width="400" />
+            <Image
+              alt="Modern Design"
+              src="/showcase/modern.svg"
+              height="400"
+              width="400"
+            />
           </div>
         </div>
 
@@ -60,7 +70,12 @@ const Home = () => {
             </p>
           </div>
           <div className="mt-4 xs:w-3/4 mx-auto md:w-full md:mt-0">
-            <Image src="/showcase/minimal.svg" height="400" width="400" />
+            <Image
+              alt="Minimal Design"
+              src="/showcase/minimal.svg"
+              height="400"
+              width="400"
+            />
           </div>
         </div>
       </div>

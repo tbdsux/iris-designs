@@ -9,15 +9,22 @@ const NavMenu = () => {
     <nav className="flex flex-col lg:flex-row items-center justify-between w-11/12 mx-auto py-6">
       <div className="flex items-center justify-between w-full lg:w-auto">
         <div className="inline-flex items-center">
-          <Image src="/logo.png" height="55" width="55" />
-          <h1 className="ml-2 uppercase text-2xl font-extrabold text-gray-700">
-            <span className="text-main">Iris</span> Designs
+          <Image
+            alt="Iris Designs Logo"
+            src="/logo.png"
+            height="55"
+            width="55"
+          />
+          <h1 className="hidden md:block ml-2 uppercase text-2xl font-extrabold text-gray-700">
+            <span className="text-main">Iris</span>
+            <br className="hidden lg:block xl:hidden" /> Designs
           </h1>
         </div>
         <div className="lg:hidden flex items-center">
           {/* open menu button */}
           {!menu ? (
             <button
+              name="Open Mobile Menu"
               onClick={() => setMenu(true)}
               className="mr-2 w-10 h-10 text-grad-1 focus:text-grad-2"
             >
@@ -39,6 +46,7 @@ const NavMenu = () => {
           {/* close menu button */}
           {menu ? (
             <button
+              name="Close Mobile Button"
               onClick={() => setMenu(false)}
               className="mr-2 w-10 h-10 text-grad-1 focus:text-grad-2"
             >
@@ -60,7 +68,7 @@ const NavMenu = () => {
           {/* hire button */}
           <a
             href="#"
-            className="bg-main text-xl text-white py-2 px-6 hover:bg-grad-1 flex items-center"
+            className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
               <svg
@@ -135,7 +143,7 @@ const NavMenu = () => {
         <li className="pl-8">
           <a
             href="#"
-            className="bg-main text-white py-2 px-6 hover:bg-grad-1 flex items-center"
+            className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
               <svg

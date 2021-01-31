@@ -27,7 +27,12 @@ const AboutUs = () => {
               designing promotional material for businesses
             </h3>
           </div>
-          <Image src="/about.svg" height="500" width="500" />
+          <Image
+            src="/about.svg"
+            height="500"
+            width="500"
+            alt="Iris Designs - About Us"
+          />
         </div>
       </div>
 

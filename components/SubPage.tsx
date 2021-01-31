@@ -32,7 +32,12 @@ const SubPage = (props: SubPageProps) => {
         </div>
       </div>
       <div className="mt-4 lg:mt-0 mx-auto w-11/12 xs:w-5/6 md:w-1/2">
-        <Image src={`${props.page_image}`} height="450" width="450" />
+        <Image
+          alt={`${props.page_title}`}
+          src={`${props.page_image}`}
+          height="450"
+          width="450"
+        />
       </div>
     </div>
   )

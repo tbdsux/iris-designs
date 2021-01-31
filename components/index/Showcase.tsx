@@ -16,7 +16,12 @@ const Showcase = () => {
             for your
             <br className="hidden md:block" /> perfect business needs
           </h2>
-          <Image src="/logo-banner.png" height="200" width="400" />
+          <Image
+            src="/logo-banner.png"
+            height="200"
+            width="400"
+            alt="Iris Designs Banner"
+          />
         </div>
       </div>
     </div>

@@ -1,30 +1,36 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <footer className="py-12 bg-gray-100">
       <div className="w-5/6 mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="flex items-center">
-          <Image src="/logo.png" height="40" width="40" />
+          <Image
+            alt="Iris Designs Logo"
+            src="/logo.png"
+            height="40"
+            width="40"
+          />
           <h4 className="text-xl ml-2 uppercase text-gray-700">
             <span className="text-main font-bold">Iris</span> Designs
           </h4>
         </div>
         <ul className="text-lg flex flex-row md:flex-col lg:flex-row text-gray-700 my-4 md:my-0">
           <li className="px-4">
-            <a href="#" className="hover:underline">
-              Home
-            </a>
+            <Link href="/">
+              <a className="hover:underline">Home</a>
+            </Link>
           </li>
           <li className="px-4">
-            <a href="#" className="hover:underline">
-              Services
-            </a>
+            <Link href="/services">
+              <a className="hover:underline">Services</a>
+            </Link>
           </li>
           <li className="px-4">
-            <a href="#" className="hover:underline">
-              Portfolio
-            </a>
+            <Link href="/portfolio">
+              <a className="hover:underline">Portfolio</a>
+            </Link>
           </li>
         </ul>
         <p className="text-lg text-gray-600">

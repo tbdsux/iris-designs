@@ -16,6 +16,7 @@ const Team = () => {
               height="200"
               width="200"
               className="rounded-full"
+              alt={member.name}
             />
             <div className="mt-3">
               <h4 className="text-3xl text-main font-bold">{member.name}</h4>

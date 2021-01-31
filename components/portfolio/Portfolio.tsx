@@ -42,6 +42,7 @@ const MainPortfolio = () => {
                   width="500"
                   objectFit="cover"
                   className="hover:scale-110 transform duration-500 z-0 cursor-pointer"
+                  alt={`Iris Designs - ${project.name}`}
                 />
               </button>
             </div>

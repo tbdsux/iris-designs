@@ -11,11 +11,12 @@ const MainServices = () => {
             key={services.indexOf(service)}
             className="p-6 border-2 rounded-lg border-main border-opacity-10 shadow-xl"
           >
-            <div className="flex flex-col lg:flex-row items-center text-center">
+            <div className="flex flex-col lg:flex-row items-center text-center lg:text-left">
               <Image
                 src={`/services/${service.image}`}
                 height="400"
                 width="400"
+                alt={`Iris Designs - ${service.name}`}
               />
               <div className="lg:ml-6">
                 <h3 className="text-4xl font-extrabold">{service.name}</h3>
