@@ -24,7 +24,7 @@ const NavMenu = () => {
           {/* open menu button */}
           {!menu ? (
             <button
-              name="Open Mobile Menu"
+              aria-label="Open Mobile Menu"
               onClick={() => setMenu(true)}
               className="mr-2 w-10 h-10 text-grad-1 focus:text-grad-2"
             >
@@ -46,7 +46,7 @@ const NavMenu = () => {
           {/* close menu button */}
           {menu ? (
             <button
-              name="Close Mobile Button"
+              aria-label="Close Mobile Button"
               onClick={() => setMenu(false)}
               className="mr-2 w-10 h-10 text-grad-1 focus:text-grad-2"
             >
