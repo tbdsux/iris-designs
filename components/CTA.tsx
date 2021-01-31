@@ -9,7 +9,7 @@ const CTA = ({ text }: CTAProps) => {
         <p className="text-2xl pr-4 md:w-3/4">{text}</p>
         <a
           href="#"
-          className="bg-main text-white py-2 px-8 hover:bg-grad-1 flex items-center text-xl mt-3 md:mt-0"
+          className="bg-main text-xl text-white uppercase font-bold py-2 px-8 hover:bg-grad-1 flex items-center mt-3 md:mt-0"
         >
           <div className="h-6 w-6 mr-2">
             <svg
