@@ -7,12 +7,13 @@ import { projects } from '../../data/projects'
 const MainPortfolio = () => {
   const [imageToggle, setToggleImage] = useState(false)
   const [sources, setSources] = useState([])
+  const [srcKey, setSrcKey] = useState('')
 
   return (
     <div className="my-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
-          <div key={project.name}>
+          <div key={project.name} className="w-full h-full">
             <div className="group relative">
               <div className="absolute z-40 w-full bottom-0 hidden group-hover:block">
                 <div className="bg-grad-1 py-4 px-6 text-white relative w-full">
@@ -33,6 +34,7 @@ const MainPortfolio = () => {
                       return `/projects/${project.design}/${image}`
                     }),
                   )
+                  setSrcKey(project.name)
                   setToggleImage(!imageToggle)
                 }}
               >
@@ -49,7 +51,12 @@ const MainPortfolio = () => {
           </div>
         ))}
       </div>
-      <FsLightbox toggler={imageToggle} sources={sources} />
+      <FsLightbox
+        toggler={imageToggle}
+        sources={sources}
+        key={srcKey}
+        type="image"
+      />
     </div>
   )
 }

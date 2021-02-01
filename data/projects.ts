@@ -1,6 +1,7 @@
 import { Project } from './portfolio/portfolio'
 
 // import all projects
+import { set } from './portfolio/set'
 import { logos } from './portfolio/logo'
 import { banners } from './portfolio/banner'
 import { brochures } from './portfolio/brochure'
@@ -16,6 +17,7 @@ let projects: Project[] = []
 // append all
 projects = projects
   .concat(
+    set,
     logos,
     banners,
     brochures,
