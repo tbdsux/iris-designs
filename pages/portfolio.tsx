@@ -29,7 +29,7 @@ const Portfolio = () => {
       <hr />
 
       {/* projects made */}
-      <div className="py-12">
+      <div className="py-12" id="sub-content">
         <div className="text-center">
           <h3 className="text-3xl font-extrabold text-gray-700">
             The Projects we have Made...

@@ -21,7 +21,7 @@ const SubPage = (props: SubPageProps) => {
         </p>
         <div className="mt-8">
           <a
-            href="#"
+            href="#sub-content"
             type="button"
             title="Products or outputs that we do"
             className="bg-grad-1 hover:bg-grad-2 text-white text-xl md:text-2xl py-2 px-6 inline-flex items-center"

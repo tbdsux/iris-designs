@@ -35,7 +35,7 @@ const Services = () => {
 
       <hr />
 
-      <div className="py-12">
+      <div className="py-12" id="sub-content">
         <div className="w-11/12 mx-auto">
           <h3 className="text-2xl font-bold underline text-gray-700">
             We currently offer the following design services...
