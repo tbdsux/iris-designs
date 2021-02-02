@@ -6,9 +6,23 @@ import Footer from '../components/Footer'
 import SubPage from '../components/SubPage'
 import MainServices from '../components/services/Services'
 
+import { NextSeo } from 'next-seo'
+
 const Services = () => {
   return (
     <Layout title="What We Do | Services - Iris Designs">
+      {/* seo */}
+      <NextSeo
+        title="What We Do | Services - Iris Designs"
+        description="Not sure on what we do? We primarily focus on crafting and designing materials for businesses and companies. You can contact us for more information."
+        openGraph={{
+          url: 'https://irisdesigns.cf/services',
+          title: 'What We Do | Services - Iris Designs',
+          description:
+            'Not sure on what we do? We primarily focus on crafting and designing materials for businesses and companies. You can contact us for more information.',
+        }}
+      />
+
       <NavMenu />
 
       <SubPage

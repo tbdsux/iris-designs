@@ -6,9 +6,23 @@ import Showcase from '../components/index/Showcase'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
 
+import { NextSeo } from 'next-seo'
+
 const Home = () => {
   return (
     <Layout title="Iris Designs | Official Website">
+      {/* seo */}
+      <NextSeo
+        title="Iris Designs | Official Website"
+        description="The production team for your perfect business needs."
+        openGraph={{
+          url: 'https://irisdesigns.cf',
+          title: 'Iris Designs | Official Website',
+          description:
+            'Official website for Iris Designs. The production team for your perfect business needs.',
+        }}
+      />
+
       {/* main navigation menu */}
       <NavMenu />
 

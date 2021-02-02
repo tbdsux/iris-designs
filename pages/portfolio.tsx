@@ -5,9 +5,23 @@ import SubPage from '../components/SubPage'
 import CTA from '../components/CTA'
 import MainPortfolio from '../components/portfolio/Portfolio'
 
+import { NextSeo } from 'next-seo'
+
 const Portfolio = () => {
   return (
     <Layout title="Our Projects | Portfolio - Iris Designs">
+      {/* seo */}
+      <NextSeo
+        title="Our Projects | Portfolio - Iris Designs"
+        description="Look and discover the projects that we have crafted, designed and made for businesses and concept designs."
+        openGraph={{
+          url: 'https://irisdesigns.cf/portfolio',
+          title: 'Our Projects | Portfolio - Iris Designs',
+          description:
+            'Look and discover the projects that we have crafted, designed and made for businesses and concept designs.',
+        }}
+      />
+
       <NavMenu />
 
       <SubPage

@@ -6,9 +6,23 @@ import Footer from '../components/Footer'
 
 import Team from '../components/about/Team'
 
+import { NextSeo } from 'next-seo'
+
 const AboutUs = () => {
   return (
     <Layout title="Who We Are | About Us - Iris Designs">
+      {/* seo */}
+      <NextSeo
+        title="Who We Are | About Us - Iris Designs"
+        description="Iris Designs is a production team based in the Philippines that focuses on designing promotional material for businesses."
+        openGraph={{
+          url: 'https://irisdesigns.cf/about-us',
+          title: 'Who We Are | About Us - Iris Designs',
+          description:
+            'Iris Designs is a production team based in the Philippines that focuses on designing promotional material for businesses.',
+        }}
+      />
+
       <NavMenu />
 
       {/* header */}
