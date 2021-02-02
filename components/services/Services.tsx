@@ -26,7 +26,8 @@ const MainServices = () => {
             <div className="text-center">
               <a
                 type="button"
-                href="#"
+                href="https://web.facebook.com/NotIrisCreations"
+                target="_blank"
                 className="bg-main hover:bg-grad-1 text-white text-lg mt-2 py-1 px-8 rounded-full"
               >
                 Contact Us

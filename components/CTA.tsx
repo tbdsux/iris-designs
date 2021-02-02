@@ -8,7 +8,8 @@ const CTA = ({ text }: CTAProps) => {
       <div className="w-5/6 md:w-11/12 lg:w-5/6 mx-auto flex flex-col md:flex-row items-center justify-between">
         <p className="text-2xl pr-4 md:w-3/4">{text}</p>
         <a
-          href="#"
+          href="https://web.facebook.com/NotIrisCreations"
+          target="_blank"
           className="bg-main text-xl text-white uppercase font-bold py-2 px-8 hover:bg-grad-1 flex items-center mt-3 md:mt-0"
         >
           <div className="h-6 w-6 mr-2">

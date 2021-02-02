@@ -67,7 +67,8 @@ const NavMenu = () => {
 
           {/* hire button */}
           <a
-            href="#"
+            href="https://web.facebook.com/NotIrisCreations"
+            target="_blank"
             className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
@@ -142,7 +143,8 @@ const NavMenu = () => {
         </li>
         <li className="pl-8">
           <a
-            href="#"
+            href="https://web.facebook.com/NotIrisCreations"
+            target="_blank"
             className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
