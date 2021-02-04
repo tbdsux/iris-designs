@@ -30,4 +30,11 @@ export const members: team[] = [
       facebook: 'https://web.facebook.com/gapuzmaduro',
     },
   },
+  {
+    name: 'Joshue Abance',
+    image: 'joshue.jpg',
+    social: {
+      facebook: 'https://web.facebook.com/joshue1337',
+    },
+  },
 ]

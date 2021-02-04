@@ -5,21 +5,23 @@ import { members } from '../../data/team'
 const Team = () => {
   return (
     <div className="py-10">
-      <div className="w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-8">
+      <div className="w-5/6 xl:w-11/12 2xl:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {members.map((member) => (
           <div
             key={member.name}
-            className="flex flex-col md:flex-row lg:flex-col items-center justify-around text-center p-6 border-opacity-20 rounded-lg bg-white"
+            className="flex flex-col lg:flex-col items-center justify-around text-center p-6 border-opacity-20 rounded-lg bg-white"
           >
             <Image
               src={`/about/${member.image}`}
-              height="200"
-              width="200"
+              height="300"
+              width="300"
               className="rounded-full"
               alt={member.name}
             />
             <div className="mt-3">
-              <h4 className="text-3xl text-main font-bold">{member.name}</h4>
+              <h4 className="text-3xl text-main font-extrabold">
+                {member.name}
+              </h4>
               <ul className="mt-2">
                 {member.social.facebook !== '' ? (
                   <li className="bg-blue-500 hover:bg-blue-600 rounded-full text-white py-2 text-lg flex justify-center items-center">
