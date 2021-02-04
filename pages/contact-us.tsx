@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer'
 
+import { NextSeo } from 'next-seo'
+
 const ContactUs = () => {
   // status for sending message
   const [status, setStatus] = useState({
@@ -102,6 +104,18 @@ const ContactUs = () => {
 
   return (
     <Layout title="Contact Us | Iris Designs">
+      {/* seo */}
+      <NextSeo
+        title="Contact Us | Iris Designs"
+        description="Want to send a message to us? Let us know what you think of our service and what things could be improved."
+        openGraph={{
+          url: 'https://irisdesigns.cf/contact-us',
+          title: 'Contact Us | Iris Designs',
+          description:
+            'Want to send a message to us? Let us know what you think of our service and what things could be improved.',
+        }}
+      />
+
       <NavMenu />
 
       {/* header */}
