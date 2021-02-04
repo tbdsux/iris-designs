@@ -18,50 +18,86 @@ const ContactUs = () => {
     },
   })
 
+  // other util states
+  const [btnSubmit, setBtnSubmit] = useState('Send Message')
+  const [formErr, setFormErr] = useState({
+    err: false,
+    msg: null,
+  })
+
   // html form inputs
   const email = useRef<HTMLInputElement>(null)
   const fullname = useRef<HTMLInputElement>(null)
   const message = useRef<HTMLTextAreaElement>(null)
 
+  const validateFields = () => {
+    if (
+      email.current.value == '' ||
+      fullname.current.value == '' ||
+      message.current.value == ''
+    ) {
+      return false
+    }
+
+    return true
+  }
+
   const submitForm = (e: FormEvent) => {
     e.preventDefault()
 
-    // send post data to formspress endpoint
-    axios({
-      method: 'POST',
-      url: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT,
-      data: {
-        fullname: fullname.current.value,
-        email: email.current.value,
-        message: message.current.value,
-      },
-    })
-      .then((response) => {
-        // set status state
-        setStatus({
-          toSubmit: false,
-          submitted: true,
-          submitStatus: 'Message Sent',
-          info: {
-            error: false,
-            msg:
-              'Your message has been sent successfully. Thank you very much.',
-          },
-        })
+    // simple form validation
+    if (validateFields()) {
+      // change button text
+      setBtnSubmit('Sending...')
+
+      // set formerr -> false
+      setFormErr({
+        err: false,
+        msg: '',
       })
-      .catch((e) => {
-        // set status state
-        setStatus({
-          toSubmit: false,
-          submitted: false,
-          submitStatus: 'Error',
-          info: {
-            error: true,
-            msg:
-              'There was a problem with your request. It could be in our side or yours. Please try again later.',
-          },
-        })
+
+      // send post data to formspress endpoint
+      axios({
+        method: 'POST',
+        url: process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT,
+        data: {
+          fullname: fullname.current.value,
+          email: email.current.value,
+          message: message.current.value,
+        },
       })
+        .then((response) => {
+          // set status state
+          setStatus({
+            toSubmit: false,
+            submitted: true,
+            submitStatus: 'Message Sent',
+            info: {
+              error: false,
+              msg:
+                'Your message has been sent successfully. Thank you very much.',
+            },
+          })
+        })
+        .catch((e) => {
+          // set status state
+          setStatus({
+            toSubmit: false,
+            submitted: false,
+            submitStatus: 'Error',
+            info: {
+              error: true,
+              msg:
+                'There was a problem with your request. It could be in our side or yours. Please try again later.',
+            },
+          })
+        })
+    } else {
+      setFormErr({
+        err: true,
+        msg: 'Please complete the fields below!',
+      })
+    }
   }
 
   return (
@@ -83,6 +119,14 @@ const ContactUs = () => {
         <div className="w-11/12 mx-auto md:w-2/3 lg:w-1/2 bg-grad-1 py-12 rounded-md">
           {status.toSubmit ? (
             <div className="w-5/6 mx-auto">
+              {/* form error */}
+              {formErr.err ? (
+                <p className="text-xl text-red-300 uppercase mb-3">
+                  {formErr.msg}
+                </p>
+              ) : null}
+              {/* end form error */}
+
               <p className="text-xl text-white underline text-center">
                 Please fill up the information below...
               </p>
@@ -93,6 +137,7 @@ const ContactUs = () => {
                   </label>
                   <input
                     ref={fullname}
+                    required
                     type="text"
                     className="py-3 px-4 w-full border-2 rounded-md border-gray-300 focus:border-main outline-none text-lg xl:text-xl"
                     placeholder="Your Fullname"
@@ -107,10 +152,15 @@ const ContactUs = () => {
                   </label>
                   <input
                     ref={email}
+                    required
                     type="email"
                     className="py-3 px-4 w-full border-2 rounded-md border-gray-300 focus:border-main outline-none text-lg xl:text-xl"
                     placeholder="Your Email Address"
                   />
+                  <small className="text-sm text-white mb-1">
+                    We do not collect and use emails for any advertising
+                    purposes. We will only use it to contact you if needed.
+                  </small>
                 </div>
                 <div className="my-3 flex flex-col">
                   <label htmlFor="message" className="text-lg mb-1 text-white">
@@ -118,6 +168,7 @@ const ContactUs = () => {
                   </label>
                   <textarea
                     ref={message}
+                    required
                     name="message"
                     className="py-3 px-4 w-full border-2 h-32 rounded-md border-gray-300 focus:border-main outline-none text-lg xl:text-xl"
                     placeholder="What do you want to say to us?"
@@ -128,7 +179,7 @@ const ContactUs = () => {
                     type="submit"
                     className="bg-main opacity-80 hover:opacity-100 py-2 px-8 text-xl text-white"
                   >
-                    Send Message
+                    {btnSubmit}
                   </button>
                 </div>
               </form>
