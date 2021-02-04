@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Layout from '../components/Layout'
 import NavMenu from '../components/NavMenu'
@@ -74,26 +75,24 @@ const Services = () => {
                 your business
               </p>
               <div className="mt-8">
-                <a
-                  href="https://web.facebook.com/NotIrisCreations"
-                  target="_blank"
-                  className="bg-main py-3 px-8 text-xl text-white opacity-90 hover:opacity-100 inline-flex items-center"
-                >
-                  <div className="h-6 w-6 mr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  Send Us a Message
-                </a>
+                <Link href="/contact-us">
+                  <a className="bg-main py-3 px-8 text-xl text-white opacity-90 hover:opacity-100 inline-flex items-center">
+                    <div className="h-6 w-6 mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    Send Us a Message
+                  </a>
+                </Link>
               </div>
             </div>
             <Image

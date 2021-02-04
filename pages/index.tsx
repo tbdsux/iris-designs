@@ -31,7 +31,7 @@ const Home = () => {
 
       <hr />
 
-      <div className="w-5/6 mx-auto py-20">
+      <div className="w-5/6 mx-auto py-24">
         <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 underline">
           We believe that a good design should be...
         </h2>

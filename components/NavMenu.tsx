@@ -12,8 +12,8 @@ const NavMenu = () => {
           <Image
             alt="Iris Designs Logo"
             src="/logo.png"
-            height="55"
-            width="55"
+            height="45"
+            width="45"
           />
           <h1 className="hidden md:block ml-2 uppercase text-2xl font-extrabold text-gray-700">
             <span className="text-main">Iris</span>
@@ -69,7 +69,7 @@ const NavMenu = () => {
           <a
             href="https://web.facebook.com/NotIrisCreations"
             target="_blank"
-            className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
+            className="bg-main text-lg 2xl:text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
               <svg
@@ -93,7 +93,7 @@ const NavMenu = () => {
       {/* for mobile > tablet navigations */}
       {menu ? (
         <div className="lg:hidden w-full">
-          <ul className="mt-3 flex flex-col justify-center md:flex-row text-xl text-gray-800 text-center">
+          <ul className="mt-3 flex flex-col justify-center md:flex-row text-lg 2xl:text-xl text-gray-800 text-center">
             <li className="py-2 md:py-0 md:px-4">
               <Link href="/">
                 <a className="tracking-wide hover:text-main">Home</a>
@@ -120,7 +120,7 @@ const NavMenu = () => {
       ) : null}
 
       {/* for desktop navigations */}
-      <ul className="hidden lg:flex items-center text-xl text-gray-800">
+      <ul className="hidden lg:flex items-center text-lg 2xl:text-xl text-gray-800">
         <li className="px-6">
           <Link href="/">
             <a className="tracking-wide hover:text-main">Home</a>
@@ -145,7 +145,7 @@ const NavMenu = () => {
           <a
             href="https://web.facebook.com/NotIrisCreations"
             target="_blank"
-            className="bg-main text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
+            className="bg-main text-lg 2xl:text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
               <svg

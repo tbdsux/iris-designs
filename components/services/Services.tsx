@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { services } from '../../data/services'
 
@@ -24,14 +25,14 @@ const MainServices = () => {
               </div>
             </div>
             <div className="text-center">
-              <a
-                type="button"
-                href="https://web.facebook.com/NotIrisCreations"
-                target="_blank"
-                className="bg-main hover:bg-grad-1 text-white text-lg mt-2 py-1 px-8 rounded-full"
-              >
-                Contact Us
-              </a>
+              <Link href="/contact-us">
+                <a
+                  type="button"
+                  className="bg-main hover:bg-grad-1 text-white text-lg mt-2 py-1 px-8 rounded-full"
+                >
+                  Contact Us
+                </a>
+              </Link>
             </div>
           </div>
         ))}

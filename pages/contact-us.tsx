@@ -127,8 +127,8 @@ const ContactUs = () => {
               ) : null}
               {/* end form error */}
 
-              <p className="text-xl text-white underline text-center">
-                Please fill up the information below...
+              <p className="text-xl text-white underline text-center font-extrabold uppercase">
+                Send Us a Message
               </p>
               <form onSubmit={submitForm}>
                 <div className="my-3 flex flex-col">
@@ -157,7 +157,7 @@ const ContactUs = () => {
                     className="py-3 px-4 w-full border-2 rounded-md border-gray-300 focus:border-main outline-none text-lg xl:text-xl"
                     placeholder="Your Email Address"
                   />
-                  <small className="text-sm text-white mb-1">
+                  <small className="text-base text-white mb-1">
                     We do not collect and use emails for any advertising
                     purposes. We will only use it to contact you if needed.
                   </small>
