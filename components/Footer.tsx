@@ -16,23 +16,23 @@ const Footer = () => {
             <span className="text-main font-bold">Iris</span> Designs
           </h4>
         </div>
-        <ul className="text-lg flex flex-col xs:flex-row md:flex-col lg:flex-row text-gray-700 my-4 md:my-0">
-          <li className="px-2 xl:px-4">
+        <ul className="text-lg text-center flex flex-col xs:flex-row md:flex-col lg:flex-row text-gray-700 my-4 md:my-0">
+          <li className="px-2 xl:px-4 my-1">
             <Link href="/about-us">
               <a className="hover:underline">About Us</a>
             </Link>
           </li>
-          <li className="px-2 xl:px-4">
+          <li className="px-2 xl:px-4 my-1">
             <Link href="/services">
               <a className="hover:underline">Services</a>
             </Link>
           </li>
-          <li className="px-2 xl:px-4">
+          <li className="px-2 xl:px-4 my-1">
             <Link href="/portfolio">
               <a className="hover:underline">Portfolio</a>
             </Link>
           </li>
-          <li className="px-2 xl:px-4">
+          <li className="px-2 xl:px-4 my-1">
             <Link href="/contact-us">
               <a className="hover:underline">Contact Us</a>
             </Link>
