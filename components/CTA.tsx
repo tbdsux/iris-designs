@@ -10,6 +10,7 @@ const CTA = ({ text }: CTAProps) => {
         <a
           href="https://web.facebook.com/NotIrisCreations"
           target="_blank"
+          rel="noopener noreferrer"
           className="bg-main text-xl text-white uppercase font-bold py-2 px-8 hover:bg-grad-1 flex items-center mt-3 md:mt-0"
         >
           <div className="h-6 w-6 mr-2">

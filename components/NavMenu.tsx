@@ -69,6 +69,7 @@ const NavMenu = () => {
           <a
             href="https://web.facebook.com/NotIrisCreations"
             target="_blank"
+            rel="noopener noreferrer"
             className="bg-main text-lg 2xl:text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
@@ -145,6 +146,7 @@ const NavMenu = () => {
           <a
             href="https://web.facebook.com/NotIrisCreations"
             target="_blank"
+            rel="noopener noreferrer"
             className="bg-main text-lg 2xl:text-xl text-white uppercase font-bold py-2 px-6 hover:bg-grad-1 flex items-center"
           >
             <div className="h-6 w-6 mr-2">
