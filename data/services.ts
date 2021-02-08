@@ -44,7 +44,12 @@ export const services: service[] = [
     name: 'Website UI',
     image: 'website.svg',
     description:
-      'Want to expand more? Let`s create a website design for your business',
+      'Want to expand more? Let`s create a website interface for your business',
+  },
+  {
+    name: 'Web Design',
+    image: 'web-design.svg',
+    description: 'Your dream website, let`s take it online for a roll',
   },
   {
     name: 'Application UI',
