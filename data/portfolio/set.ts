@@ -2,6 +2,13 @@ import { Project } from './portfolio'
 
 export const set: Project[] = [
   {
+    name: 'Mabelline Companies',
+    type: 'concept',
+    design: 'set',
+    image: 'mabelline/mabelline.jpg',
+    images: ['mabelline/mabelline.jpg', 'mabelline/mabelline-bazaar.jpg'],
+  },
+  {
     name: 'Sides Dinery',
     type: 'concept',
     design: 'set',
