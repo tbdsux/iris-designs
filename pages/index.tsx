@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import Layout from '../components/Layout'
-import NavMenu from '../components/NavMenu'
 import Showcase from '../components/index/Showcase'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
@@ -22,9 +21,6 @@ const Home = () => {
             'Official website for Iris Designs. The production team for your perfect business needs.',
         }}
       />
-
-      {/* main navigation menu */}
-      <NavMenu />
 
       {/* showcase */}
       <Showcase />

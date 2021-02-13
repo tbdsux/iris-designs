@@ -1,6 +1,8 @@
 import { ReactNode, SyntheticEvent } from 'react'
 import Head from 'next/head'
 
+import NavMenu from './NavMenu'
+
 type LayoutProps = {
   children: ReactNode
   title: string
@@ -88,7 +90,12 @@ const Layout = ({ children, title }: LayoutProps) => {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
 
-      <main className="antialiased bg-coolGray-50">{children}</main>
+      <main className="antialiased bg-coolGray-50">
+        {/* this will import the menu in all pages */}
+        <NavMenu />
+
+        {children}
+      </main>
     </div>
   )
 }

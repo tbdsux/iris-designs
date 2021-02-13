@@ -3,7 +3,6 @@ import Image from 'next/image'
 import axios from 'axios'
 
 import Layout from '../components/Layout'
-import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer'
 
 import { NextSeo } from 'next-seo'
@@ -115,8 +114,6 @@ const ContactUs = () => {
             'Want to send a message to us? Let us know what you think of our service and what things could be improved.',
         }}
       />
-
-      <NavMenu />
 
       {/* header */}
       <div className="py-12 w-2/3 mx-auto text-center">

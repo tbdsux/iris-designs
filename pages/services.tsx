@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Layout from '../components/Layout'
-import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer'
 import SubPage from '../components/SubPage'
 import MainServices from '../components/services/Services'
@@ -23,8 +22,6 @@ const Services = () => {
             'Not sure on what we do? We primarily focus on crafting and designing materials for businesses and companies. You can contact us for more information.',
         }}
       />
-
-      <NavMenu />
 
       <SubPage
         page_title="Graphics Design"

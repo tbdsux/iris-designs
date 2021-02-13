@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import Layout from '../components/Layout'
-import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer'
 
 import Team from '../components/about/Team'
@@ -22,8 +21,6 @@ const AboutUs = () => {
             'Iris Designs is a production team based in the Philippines that focuses on designing promotional material for businesses.',
         }}
       />
-
-      <NavMenu />
 
       {/* header */}
       <div className="py-12">

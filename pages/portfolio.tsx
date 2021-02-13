@@ -1,5 +1,4 @@
 import Layout from '../components/Layout'
-import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer'
 import SubPage from '../components/SubPage'
 import CTA from '../components/CTA'
@@ -21,8 +20,6 @@ const Portfolio = () => {
             'Look and discover the projects that we have crafted, designed and made for businesses and concept designs.',
         }}
       />
-
-      <NavMenu />
 
       <SubPage
         page_title="Our Portfolio"
