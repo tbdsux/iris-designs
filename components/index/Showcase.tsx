@@ -5,7 +5,7 @@ const Showcase = () => {
     <div className="py-20 w-11/12 mx-auto">
       <div className="text-center">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-7xl lg:text-7.5xl font-extrabold text-main">
+          <h1 className="text-6xl md:text-7xl lg:text-7.5xl xl:text-9xl font-extrabold text-main">
             "Stylish, Modern, Minimal"
           </h1>
         </div>
