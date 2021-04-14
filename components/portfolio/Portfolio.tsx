@@ -1,27 +1,25 @@
-import { useState } from 'react'
-import Image from 'next/image'
-import FsLightbox from 'fslightbox-react'
+import { useState } from 'react';
+import Image from 'next/image';
+import FsLightbox from 'fslightbox-react';
 
-import { projects } from '../../data/projects'
+import { projects } from '../../data/projects';
 
 const MainPortfolio = () => {
-  const [imageToggle, setToggleImage] = useState(false)
-  const [sources, setSources] = useState([])
-  const [srcKey, setSrcKey] = useState('')
+  const [imageToggle, setToggleImage] = useState(false);
+  const [sources, setSources] = useState([]);
+  const [srcKey, setSrcKey] = useState('');
 
   return (
     <div className="my-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        {projects.map((project) => (
-          <div key={project.name} className="w-full h-full">
+        {projects.map((project, index) => (
+          <div key={index} className="w-full h-full">
             <div className="group relative">
               <div className="absolute z-40 w-full bottom-0 hidden group-hover:block">
                 <div className="bg-grad-1 py-4 px-6 text-white relative w-full">
                   <p className="text-lg flex items-center justify-center">
                     [{project.design}]{' '}
-                    <span className="font-bold text-2xl ml-2">
-                      {project.name}
-                    </span>
+                    <span className="font-bold text-2xl ml-2">{project.name}</span>
                   </p>
                 </div>
               </div>
@@ -30,12 +28,11 @@ const MainPortfolio = () => {
                 onClick={() => {
                   setSources(
                     project.images.map((image) => {
-                      console.log(`/projects/${project.design}/${image}`)
-                      return `/projects/${project.design}/${image}`
-                    }),
-                  )
-                  setSrcKey(project.name)
-                  setToggleImage(!imageToggle)
+                      return `/projects/${project.design}/${image}`;
+                    })
+                  );
+                  setSrcKey(project.name);
+                  setToggleImage(!imageToggle);
                 }}
               >
                 <Image
@@ -51,14 +48,9 @@ const MainPortfolio = () => {
           </div>
         ))}
       </div>
-      <FsLightbox
-        toggler={imageToggle}
-        sources={sources}
-        key={srcKey}
-        type="image"
-      />
+      <FsLightbox toggler={imageToggle} sources={sources} key={srcKey} type="image" />
     </div>
-  )
-}
+  );
+};
 
-export default MainPortfolio
+export default MainPortfolio;

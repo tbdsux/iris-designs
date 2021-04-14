@@ -1,15 +1,16 @@
-import { AppProps } from 'next/app'
-import { DefaultSeo } from 'next-seo'
-import '../styles/tailwind.css'
-import SEO from '../next-seo.config'
+import { AppProps } from "next/app";
+import { DefaultSeo } from "next-seo";
+import "../styles/tailwind.css";
+import SEO from "../next-seo.config";
+import { ThemeProvider } from "../lib/themeContext";
 
 function IrisDesigns({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
-    </>
-  )
+	return (
+		<ThemeProvider>
+			<DefaultSeo {...SEO} />
+			<Component {...pageProps} />
+		</ThemeProvider>
+	);
 }
 
-export default IrisDesigns
+export default IrisDesigns;

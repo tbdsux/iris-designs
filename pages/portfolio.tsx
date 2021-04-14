@@ -1,10 +1,10 @@
-import Layout from '../components/Layout'
-import Footer from '../components/Footer'
-import SubPage from '../components/SubPage'
-import CTA from '../components/CTA'
-import MainPortfolio from '../components/portfolio/Portfolio'
+import Layout from '../components/Layout';
+import Footer from '../components/Footer';
+import SubPage from '../components/SubPage';
+import CTA from '../components/CTA';
+import MainPortfolio from '../components/portfolio/Portfolio';
 
-import { NextSeo } from 'next-seo'
+import { NextSeo } from 'next-seo';
 
 const Portfolio = () => {
   return (
@@ -17,7 +17,7 @@ const Portfolio = () => {
           url: 'https://irisdesigns.cf/portfolio',
           title: 'Our Projects | Portfolio - Iris Designs',
           description:
-            'Look and discover the projects that we have crafted, designed and made for businesses and concept designs.',
+            'Look and discover the projects that we have crafted, designed and made for businesses and concept designs.'
         }}
       />
 
@@ -25,11 +25,7 @@ const Portfolio = () => {
         page_title="Our Portfolio"
         page_description="We have crafted good-looking designs for businesses and made pre-made concept designs"
         page_button_icon={
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
           </svg>
         }
@@ -42,7 +38,7 @@ const Portfolio = () => {
       {/* projects made */}
       <div className="py-12" id="sub-content">
         <div className="text-center">
-          <h3 className="text-3xl font-extrabold text-gray-700">
+          <h3 className="text-3xl font-extrabold text-gray-700 dark:text-gray-300">
             The Projects we have Made...
           </h3>
           <MainPortfolio />
@@ -53,7 +49,7 @@ const Portfolio = () => {
 
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

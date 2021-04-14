@@ -21,7 +21,11 @@ module.exports = {
     fontFamily: {
       sans: ['"Karla"', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      borderWidth: {
+        12: '12px'
+      }
+    }
   },
   variants: {
     extend: {}

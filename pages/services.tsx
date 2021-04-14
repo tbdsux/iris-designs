@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Layout from '../components/Layout'
-import Footer from '../components/Footer'
-import SubPage from '../components/SubPage'
-import MainServices from '../components/services/Services'
+import Layout from '../components/Layout';
+import Footer from '../components/Footer';
+import SubPage from '../components/SubPage';
+import MainServices from '../components/services/Services';
 
-import { NextSeo } from 'next-seo'
+import { NextSeo } from 'next-seo';
 
 const Services = () => {
   return (
@@ -19,7 +19,7 @@ const Services = () => {
           url: 'https://irisdesigns.cf/services',
           title: 'What We Do | Services - Iris Designs',
           description:
-            'Not sure on what we do? We primarily focus on crafting and designing materials for businesses and companies. You can contact us for more information.',
+            'Not sure on what we do? We primarily focus on crafting and designing materials for businesses and companies. You can contact us for more information.'
         }}
       />
 
@@ -28,11 +28,7 @@ const Services = () => {
         page_description="We primarily focus on crafting and designing materials for
             businesses and companies"
         page_button_icon={
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
             <path
               fillRule="evenodd"
@@ -49,7 +45,7 @@ const Services = () => {
 
       <div className="py-12" id="sub-content">
         <div className="w-11/12 mx-auto">
-          <h3 className="text-2xl font-bold underline text-gray-700">
+          <h3 className="text-2xl font-bold underline text-gray-700 dark:text-gray-300">
             We currently offer the following design services...
           </h3>
 
@@ -68,8 +64,7 @@ const Services = () => {
                 Not sure of what to do?
               </h1>
               <p className="text-2xl md:text-3xl mt-4 text-gray-300">
-                Send us a message and we will try to help you on your design for
-                your business
+                Send us a message and we will try to help you on your design for your business
               </p>
               <div className="mt-8">
                 <Link href="/contact-us">
@@ -92,19 +87,14 @@ const Services = () => {
                 </Link>
               </div>
             </div>
-            <Image
-              src="/question.svg"
-              height="400"
-              width="400"
-              alt="Ask Us a Question"
-            />
+            <Image src="/question.svg" height="400" width="400" alt="Ask Us a Question" />
           </div>
         </div>
       </div>
 
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

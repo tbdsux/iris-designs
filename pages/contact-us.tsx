@@ -1,11 +1,11 @@
-import { FormEvent, useRef, useState } from 'react'
-import Image from 'next/image'
-import axios from 'axios'
+import { FormEvent, useRef, useState } from 'react';
+import Image from 'next/image';
+import axios from 'axios';
 
-import Layout from '../components/Layout'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 
-import { NextSeo } from 'next-seo'
+import { NextSeo } from 'next-seo';
 
 const ContactUs = () => {
   // status for sending message
@@ -15,47 +15,43 @@ const ContactUs = () => {
     submitStatus: 'Send Message',
     info: {
       error: false,
-      msg: null,
-    },
-  })
+      msg: null
+    }
+  });
 
   // other util states
-  const [btnSubmit, setBtnSubmit] = useState('Send Message')
+  const [btnSubmit, setBtnSubmit] = useState('Send Message');
   const [formErr, setFormErr] = useState({
     err: false,
-    msg: null,
-  })
+    msg: null
+  });
 
   // html form inputs
-  const email = useRef<HTMLInputElement>(null)
-  const fullname = useRef<HTMLInputElement>(null)
-  const message = useRef<HTMLTextAreaElement>(null)
+  const email = useRef<HTMLInputElement>(null);
+  const fullname = useRef<HTMLInputElement>(null);
+  const message = useRef<HTMLTextAreaElement>(null);
 
   const validateFields = () => {
-    if (
-      email.current.value == '' ||
-      fullname.current.value == '' ||
-      message.current.value == ''
-    ) {
-      return false
+    if (email.current.value == '' || fullname.current.value == '' || message.current.value == '') {
+      return false;
     }
 
-    return true
-  }
+    return true;
+  };
 
   const submitForm = (e: FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // simple form validation
     if (validateFields()) {
       // change button text
-      setBtnSubmit('Sending...')
+      setBtnSubmit('Sending...');
 
       // set formerr -> false
       setFormErr({
         err: false,
-        msg: '',
-      })
+        msg: ''
+      });
 
       // send post data to formspress endpoint
       axios({
@@ -64,8 +60,8 @@ const ContactUs = () => {
         data: {
           fullname: fullname.current.value,
           email: email.current.value,
-          message: message.current.value,
-        },
+          message: message.current.value
+        }
       })
         .then((response) => {
           // set status state
@@ -75,10 +71,9 @@ const ContactUs = () => {
             submitStatus: 'Message Sent',
             info: {
               error: false,
-              msg:
-                'Your message has been sent successfully. Thank you very much.',
-            },
-          })
+              msg: 'Your message has been sent successfully. Thank you very much.'
+            }
+          });
         })
         .catch((e) => {
           // set status state
@@ -89,17 +84,17 @@ const ContactUs = () => {
             info: {
               error: true,
               msg:
-                'There was a problem with your request. It could be in our side or yours. Please try again later.',
-            },
-          })
-        })
+                'There was a problem with your request. It could be in our side or yours. Please try again later.'
+            }
+          });
+        });
     } else {
       setFormErr({
         err: true,
-        msg: 'Please complete the fields below!',
-      })
+        msg: 'Please complete the fields below!'
+      });
     }
-  }
+  };
 
   return (
     <Layout title="Contact Us | Iris Designs">
@@ -111,17 +106,16 @@ const ContactUs = () => {
           url: 'https://irisdesigns.cf/contact-us',
           title: 'Contact Us | Iris Designs',
           description:
-            'Want to send a message to us? Let us know what you think of our service and what things could be improved.',
+            'Want to send a message to us? Let us know what you think of our service and what things could be improved.'
         }}
       />
 
       {/* header */}
       <div className="py-12 w-2/3 mx-auto text-center">
         <h3 className="text-4xl font-extrabold text-main">Contact Us</h3>
-        <p className="text-2xl mt-4">
+        <p className="text-2xl mt-4 dark:text-gray-100">
           Want to send a message to us? <br />
-          Let us know what you think of our service and what things could be
-          improved.
+          Let us know what you think of our service and what things could be improved.
         </p>
       </div>
 
@@ -132,9 +126,7 @@ const ContactUs = () => {
             <div className="w-5/6 mx-auto">
               {/* form error */}
               {formErr.err ? (
-                <p className="text-xl text-red-300 uppercase mb-3">
-                  {formErr.msg}
-                </p>
+                <p className="text-xl text-red-300 uppercase mb-3">{formErr.msg}</p>
               ) : null}
               {/* end form error */}
 
@@ -155,10 +147,7 @@ const ContactUs = () => {
                   />
                 </div>
                 <div className="my-3 flex flex-col">
-                  <label
-                    htmlFor="email-address"
-                    className="text-lg mb-1 text-white"
-                  >
+                  <label htmlFor="email-address" className="text-lg mb-1 text-white">
                     Email Address
                   </label>
                   <input
@@ -169,8 +158,8 @@ const ContactUs = () => {
                     placeholder="Your Email Address"
                   />
                   <small className="text-base text-white mb-1">
-                    We do not collect and use emails for any advertising
-                    purposes. We will only use it to contact you if needed.
+                    We do not collect and use emails for any advertising purposes. We will only use
+                    it to contact you if needed.
                   </small>
                 </div>
                 <div className="my-3 flex flex-col">
@@ -197,9 +186,7 @@ const ContactUs = () => {
             </div>
           ) : (
             <div className="w-5/6 mx-auto h-full flex items-center justify-center">
-              <p className="text-center text-xl text-white">
-                {status.info.msg}
-              </p>
+              <p className="text-center text-xl text-white">{status.info.msg}</p>
             </div>
           )}
         </div>
@@ -212,7 +199,7 @@ const ContactUs = () => {
 
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
